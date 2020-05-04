@@ -1,5 +1,6 @@
-#ifndef denemeler
-#define denemeler
+#ifndef midterm
+#define midterm
+
 int first;
 
 typedef enum{
@@ -26,12 +27,27 @@ struct node {
 int sqr;
 int x;
 typedef s stack;
-stack * tanim();
 int pop(stack *);
-
+stack * tanim(){
+	stack *s = (stack * ) malloc(sizeof (stack));
+	s->dizi = NULL;
+	s->boyut = 2;
+	s->tepe=0;
+	return s;
+}
 void push(int,stack *);
+void push2(char a,stack *s );
+void bastir2(stack *s,stack *s1 ,stack *s2 );
+void reverseLinked(stack *s);
+int square2(int x,int y);
 void bastir(stack*);
 int abudant(int );
 int square(int );
 int prime(int );
+
+stack *main_stack = tanim();
+stack *helper_stack = tanim();
+stack *keep_type = tanim();
+stack *nrOfop =tanim();
+stack *allNum=tanim();
 #endif
